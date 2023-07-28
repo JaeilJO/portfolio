@@ -124,17 +124,25 @@ function SkillSection() {
                 <div className="flex items-end h-full font-thin max-sm:items-start mb-3 mt-[-50px] max-sm:h-[10%] text-4xl max-sm:mb-10">
                     <div className="flex gap-4 ">
                         <button
-                            className={`text-[60%] cursor-pointer hover:text-stone-200 z-10 duration-200 ${leftArrowStatus} dark:hover:text-stone-600`}
+                            className={`text-[60%] cursor-pointer hover:text-stone-600 z-10 duration-200 ${leftArrowStatus} dark:hover:text-stone-600`}
                             onClick={PrevSkill}
                         >
-                            <BsFillCaretLeftFill />
+                            {currentSkill === 0 ? (
+                                <div className="w-3 h-6 rounded-md bg-stone-200" />
+                            ) : (
+                                <BsFillCaretLeftFill />
+                            )}
                         </button>
                         <div>Skill</div>
                         <button
-                            className={`text-[60%] cursor-pointer hover:text-stone-200 z-10 duration-200 ${rightArrowStatus} dark:hover:text-stone-600`}
+                            className={`text-[60%] cursor-pointer hover:text-stone-600 z-10 duration-200 ${rightArrowStatus} dark:hover:text-stone-600`}
                             onClick={nextSkill}
                         >
-                            <BsFillCaretRightFill />
+                            {currentSkill === Skills.length - 1 ? (
+                                <div className="w-3 h-6 rounded-md bg-stone-200" />
+                            ) : (
+                                <BsFillCaretRightFill />
+                            )}
                         </button>
                     </div>
                 </div>

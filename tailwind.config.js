@@ -103,18 +103,6 @@ module.exports = {
                 projects_portofoliosite_view_down_box_key: {
                     '100%': { right: `-10px`, bottom: `-5px` },
                 },
-                section_home_box_key: {
-                    '0%': { transform: 'scale(0) translate(-50%,-50%)', left: '50%', right: '50%' },
-                    '100%': { transform: 'scale(1) translate(-50%,-50%)', left: '50%', right: '50%' },
-                },
-                section_home_fill_title_key: {
-                    '0%': { opacity: '1' },
-                    '100%': { opacity: '0' },
-                },
-                section_home_line_title_key: {
-                    '0%': { opacity: '0.8' },
-                    '100%': { opacity: '1' },
-                },
             },
 
             animation: {
@@ -129,9 +117,6 @@ module.exports = {
                 section_skill_background_sub: 'section_skill_background_sub_key .4s forwards',
                 projects_portofoliosite_view_up_box: 'projects_portofoliosite_view_up_box_key 1s forwards',
                 projects_portofoliosite_view_down_box: 'projects_portofoliosite_view_down_box_key 1s forwards',
-                section_home_box: 'section_home_box_key 1s ease-in-out forwards',
-                section_home_fill_title: 'section_home_fill_title_key .4s 1s forwards',
-                section_home_line_title: 'section_home_line_title_key .4s 1s forwards',
             },
         },
     },

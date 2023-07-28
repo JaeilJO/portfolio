@@ -27,17 +27,21 @@ function ProjectSection() {
                 </div>
             </div>
 
-            <div className="flex items-center justify-between w-full h-full p-20 text-5xl max-md:p-0 ">
+            <div className="flex items-center justify-between w-full h-full gap-5 p-20 text-5xl max-md:p-0 ">
                 <button className={`${leftArrowStatus}`}>
-                    <BsChevronLeft />
+                    {currentProject === 0 ? <div className="w-3 h-10 rounded-md bg-stone-200" /> : <BsChevronLeft />}
                 </button>
-                <div className="w-[400px] h-[50%] bg-neutral-50 rounded-md overflow-hidden shadow-lg">
+                <div className="max-w-[500px] w-full h-[50%] bg-neutral-50  rounded-md overflow-hidden shadow-lg">
                     {Projects.map((project) => (
                         <React.Fragment key={project.key}>{project.projectView}</React.Fragment>
                     ))}
                 </div>
                 <button className={`${rightArrowStatus}`}>
-                    <BsChevronRight />
+                    {currentProject === Projects.length - 1 ? (
+                        <div className="w-3 h-10 rounded-md bg-stone-200" />
+                    ) : (
+                        <BsChevronRight />
+                    )}
                 </button>
             </div>
         </div>
