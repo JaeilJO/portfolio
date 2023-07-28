@@ -1,6 +1,8 @@
 import { NavigationItems } from '@/utils/NavigationItems';
 import MobileMenuItem from './MobileMenuIItem';
 import { useNavigation } from '@/zustand/navigationStore';
+import ModeChangeButton from '../Navigation/ModeChangeButton';
+import MobileButtonSet from './MobileButtonSet';
 
 function MobileMenu() {
     const [is_clicked] = useNavigation((state) => [state.is_clicked]);
@@ -14,6 +16,7 @@ function MobileMenu() {
                 {NavigationItems.map((item) => (
                     <MobileMenuItem key={item.key} title={item.title} icon={item.icon} href={item.href} />
                 ))}
+                <MobileButtonSet />
             </ul>
         </div>
     );
