@@ -87,6 +87,17 @@ module.exports = {
                     '0%': { height: '410%' },
                     '100%': { height: '0%', opacity: '0' },
                 },
+
+                section_home_bar_key: {
+                    '0%': { width: '0px', height: '0px' },
+                    '30%': { width: '10px', height: '20px' },
+                    '60%': { width: '90%', height: '10px' },
+                    '100%': { width: '80%', height: '10px' },
+                },
+                section_home_subtitle_key: {
+                    '0%': { top: '20%', opacity: '0' },
+                    '100%': { top: '0px', opacity: '1' },
+                },
             },
 
             animation: {
@@ -102,6 +113,9 @@ module.exports = {
 
                 mobile_menu_bar_open: 'mobile_menu_bar_open_key .4s ease-in-out forwards',
                 mobile_menu_bar_close: 'mobile_menu_bar_close_key .4s ease-in-out forwards',
+
+                section_home_bar: 'section_home_bar_key .4s ease-in-out forwards',
+                section_home_subtitle: 'section_home_subtitle_key .8s .5s ease-in-out forwards',
 
                 section_about_title_animation: 'section_about_title_animation_key .8s forwards',
                 section_skill_background_main: 'section_skill_background_main_key .4s forwards',
