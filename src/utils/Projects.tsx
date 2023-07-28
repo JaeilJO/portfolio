@@ -14,7 +14,7 @@ const Projects: ProjectType[] = [
         key: 0,
         title: 'Portfolio Site',
         projectView: <PortfolioSiteView />,
-        skills: [<TbBrandNextjs />, <BiLogoTailwindCss />],
+        skills: [<TbBrandNextjs key={'nextjs'} />, <BiLogoTailwindCss key={'tailwindcss'} />],
     },
 ];
 
