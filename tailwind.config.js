@@ -40,51 +40,6 @@ module.exports = {
                     },
                 },
 
-                mobile_appear_key: {
-                    '0%': {
-                        left: '0',
-                        opacity: '0',
-                    },
-                    '60%': {
-                        left: '-70px',
-                        opacity: '1',
-                    },
-                    '100%': {
-                        left: '-64px',
-                        opacity: '1',
-                    },
-                },
-
-                mobile_close_button_key: {
-                    '0%': {
-                        transform: 'translateX(-55%)',
-                    },
-                    '40%': {
-                        transform: 'translateX(-45%)',
-                    },
-                },
-
-                close_mobile_menu_key: {
-                    '0%': { right: '0px' },
-                    '100%': {
-                        right: '-60px',
-                    },
-                },
-                open_mobile_menu_key: {
-                    '100%': {
-                        right: '0px',
-                    },
-                },
-
-                mobile_open_button_key: {
-                    '0%': {
-                        left: '-40px',
-                    },
-                    '50%': {
-                        left: '-43px',
-                    },
-                },
-
                 section_about_title_animation_key: {
                     '0%': { width: '0px' },
                     '60%': { width: '15%' },
@@ -103,15 +58,52 @@ module.exports = {
                 projects_portofoliosite_view_down_box_key: {
                     '100%': { right: `-10px`, bottom: `-5px` },
                 },
+
+                hamburgerBar_appear_key: {
+                    '0%': { opacity: '0', right: '-10px' },
+                    '60%': { opacity: '1', right: '5px' },
+                    '100%': { opacity: '1', right: '0px' },
+                },
+                hamburgerBar_clicked_top_key: {
+                    '0%': { transform: 'rotate(0deg) ' },
+                    '100%': { transform: 'rotate(45deg) translate(7px,10px)' },
+                },
+                hamburgerBar_clicked_middle_key: {
+                    '0%': { opacity: '1' },
+                    '100%': { opacity: '0' },
+                },
+                hamburgerBar_clicked_bottom_key: {
+                    '0%': { transform: 'rotate(0deg) ' },
+                    '100%': { transform: 'rotate(-45deg) translate(7px,-10px)' },
+                },
+
+                mobile_menu_bar_open_key: {
+                    '0%': { height: '0%' },
+
+                    '60%': { height: '335%' },
+                    '100%': { height: '330%' },
+                },
+
+                mobile_menu_bar_close_key: {
+                    '0%': { height: '335%' },
+                    '100%': { height: '0%', opacity: '0' },
+                },
             },
 
             animation: {
                 increase_width: 'increase_width 0.3s ease-in-out',
-                mobile_appear: 'mobile_appear_key .4s ease-in-out forwards',
-                mobile_close_button: 'mobile_close_button_key 1.5s ease-in-out infinite',
-                mobile_open_button: 'mobile_open_button_key 1.5s ease-in-out infinite',
-                close_mobile_menu: 'close_mobile_menu_key .4s ease-in-out forwards',
-                open_mobile_menu: 'open_mobile_menu_key .4s  forwards',
+
+                hamburgerBar_top_appear: 'hamburgerBar_appear_key .4s ease-in-out forwards',
+                hamburgerBar_middle_appear: 'hamburgerBar_appear_key .4s .2s ease-in-out forwards',
+                hamburgerBar_bottom_appear: 'hamburgerBar_appear_key .4s .3s ease-in-out forwards',
+
+                hamburgerBar_clicked_top: 'hamburgerBar_clicked_top_key .4s ease-in-out forwards',
+                hamburgerBar_clicked_middle: 'hamburgerBar_clicked_middle_key .4s ease-in-out forwards',
+                hamburgerBar_clicked_bottom: 'hamburgerBar_clicked_bottom_key .4s ease-in-out forwards',
+
+                mobile_menu_bar_open: 'mobile_menu_bar_open_key .4s ease-in-out forwards',
+                mobile_menu_bar_close: 'mobile_menu_bar_close_key .4s ease-in-out forwards',
+
                 section_about_title_animation: 'section_about_title_animation_key .8s forwards',
                 section_skill_background_main: 'section_skill_background_main_key .4s forwards',
                 section_skill_background_sub: 'section_skill_background_sub_key .4s forwards',
