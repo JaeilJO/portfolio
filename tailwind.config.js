@@ -41,12 +41,15 @@ module.exports = {
           },
         },
 
-        section_skill_background_main_key: {
-          "0%": { transform: `translate(-30%,-70%)` },
+        section_skill_down_box_key: {
+          "0%": { transform: "translate(-55%,-45%)" },
+          "60%": { transform: "translate(-60%,-40%)" },
         },
-        section_skill_background_sub_key: {
-          "0%": { transform: `translate(-70%,-30%)` },
+        section_skill_top_box_key: {
+          "0%": { transform: "translate(-45%,-55%)" },
+          "60%": { transform: "translate(-40%,-60%)" },
         },
+
         projects_portofoliosite_view_up_box_key: {
           "100%": { left: `-10px`, top: `-12px` },
         },
@@ -136,10 +139,11 @@ module.exports = {
           "section_about_before_key .4s .8s ease-in-out forwards",
         section_about_title: "section_about_title_key .8s ease-in-out forwards",
 
-        section_skill_background_main:
-          "section_skill_background_main_key .4s forwards",
-        section_skill_background_sub:
-          "section_skill_background_sub_key .4s forwards",
+        section_skill_down_box:
+          "section_skill_down_box_key .3s ease-in-out forwards",
+        section_skill_top_box:
+          "section_skill_top_box_key .3s ease-in-out forwards",
+
         projects_portofoliosite_view_up_box:
           "projects_portofoliosite_view_up_box_key 1s forwards",
         projects_portofoliosite_view_down_box:
