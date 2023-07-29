@@ -133,9 +133,8 @@ module.exports = {
           "section_home_subtitle_key .8s .5s ease-in-out forwards",
 
         section_about_before:
-          "section_about_before_key .8s ease-in-out forwards",
-        section_about_title:
-          "section_about_title_key .48s ease-in-out forwards",
+          "section_about_before_key .4s .4s ease-in-out forwards",
+        section_about_title: "section_about_title_key .4s ease-in-out forwards",
 
         section_skill_background_main:
           "section_skill_background_main_key .4s forwards",

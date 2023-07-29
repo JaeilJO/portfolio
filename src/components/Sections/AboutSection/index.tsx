@@ -19,7 +19,7 @@ function AboutSection() {
           <div className="flex gap-2 text-4xl max-sm:text-2xl">
             <span className="font-thin">My name is</span>
             <span
-              className={`relative before:content=[''] before:w-full before:h-1 before:bg-blue-300 before:absolute before:-bottom-1 ${
+              className={`relative before:content=[''] before:w-0 before:h-1 before:bg-blue-300 before:absolute before:-bottom-1 ${
                 inView ? `before:animate-section_about_before` : ``
               }`}
             >
