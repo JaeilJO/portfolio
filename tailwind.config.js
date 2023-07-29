@@ -41,12 +41,6 @@ module.exports = {
           },
         },
 
-        section_about_title_animation_key: {
-          "0%": { width: "0px" },
-          "60%": { width: "15%" },
-          "100%": { width: "10%" },
-        },
-
         section_skill_background_main_key: {
           "0%": { transform: `translate(-30%,-70%)` },
         },
@@ -99,6 +93,17 @@ module.exports = {
           "0%": { top: "20%", opacity: "0" },
           "100%": { top: "0px", opacity: "1" },
         },
+
+        section_about_before_key: {
+          "0%": { width: "0%", opacity: "0" },
+          "60%": { width: "110%", opacity: "1" },
+          "100%": { width: "100%" },
+        },
+        section_about_title_key: {
+          "0%": { right: "100%", opacity: "0" },
+          "60%": { right: "-10%", opacity: "1" },
+          "100%": { right: "0%" },
+        },
       },
 
       animation: {
@@ -127,8 +132,11 @@ module.exports = {
         section_home_subtitle:
           "section_home_subtitle_key .8s .5s ease-in-out forwards",
 
-        section_about_title_animation:
-          "section_about_title_animation_key .8s forwards",
+        section_about_before:
+          "section_about_before_key .8s ease-in-out forwards",
+        section_about_title:
+          "section_about_title_key .48s ease-in-out forwards",
+
         section_skill_background_main:
           "section_skill_background_main_key .4s forwards",
         section_skill_background_sub:
