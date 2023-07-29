@@ -102,7 +102,7 @@ module.exports = {
         section_about_title_key: {
           "0%": { right: "100%", opacity: "0" },
           "60%": { right: "-10%", opacity: "1" },
-          "100%": { right: "0%" },
+          "100%": { right: "0%", opacity: "1" },
         },
       },
 
@@ -133,8 +133,8 @@ module.exports = {
           "section_home_subtitle_key .8s .5s ease-in-out forwards",
 
         section_about_before:
-          "section_about_before_key .4s .4s ease-in-out forwards",
-        section_about_title: "section_about_title_key .4s ease-in-out forwards",
+          "section_about_before_key .4s .8s ease-in-out forwards",
+        section_about_title: "section_about_title_key .8s ease-in-out forwards",
 
         section_skill_background_main:
           "section_skill_background_main_key .4s forwards",

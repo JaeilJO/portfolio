@@ -7,9 +7,11 @@ function AboutSection() {
 
   return (
     <div className="relative flex w-screen h-screen max-sm:flex-col" ref={ref}>
-      <div className="flex items-center justify-center w-full h-full overflow-hidden lg:text-9xl max-md:text-7xl ">
+      <div className="flex items-center justify-center w-full h-full overflow-hidden text-9xl max-md:text-7xl ">
         <div
-          className={`relative ${inView ? `animate-section_about_title` : ``}`}
+          className={`relative opacity-0 ${
+            inView ? `animate-section_about_title` : ``
+          }`}
         >
           About
         </div>
@@ -19,7 +21,7 @@ function AboutSection() {
           <div className="flex gap-2 text-4xl max-sm:text-2xl">
             <span className="font-thin">My name is</span>
             <span
-              className={`relative before:content=[''] before:w-0 before:h-1 before:bg-blue-300 before:absolute before:-bottom-1 ${
+              className={`relative before:content=[''] before:w-0 before:h-1 before:bg-blue-300 before:absolute before:-bottom-2 max-sm:before:-bottom-1 ${
                 inView ? `before:animate-section_about_before` : ``
               }`}
             >
