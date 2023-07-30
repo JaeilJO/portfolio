@@ -104,6 +104,11 @@ module.exports = {
                         boxShadow: '-50px 50px 30px rgba(0,0,0,0.5)',
                     },
                 },
+                section_skill_button_cover_key: {
+                    '50%': {
+                        opacity: '30%',
+                    },
+                },
             },
 
             animation: {
@@ -126,7 +131,8 @@ module.exports = {
                 section_about_before: 'section_about_before_key .4s .8s ease-in-out forwards',
                 section_about_title: 'section_about_title_key .8s ease-in-out forwards',
 
-                section_skill_animation: 'section_skill_animation_key .2s ease-in forwards',
+                section_skill_animation: 'section_skill_animation_key .4s ease forwards',
+                section_skill_button_cover: 'section_skill_button_cover_key 1s ease-in-out infinite',
 
                 projects_portofoliosite_view_up_box: 'projects_portofoliosite_view_up_box_key 1s forwards',
                 projects_portofoliosite_view_down_box: 'projects_portofoliosite_view_down_box_key 1s forwards',
