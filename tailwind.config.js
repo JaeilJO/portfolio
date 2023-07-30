@@ -109,6 +109,32 @@ module.exports = {
                         opacity: '30%',
                     },
                 },
+
+                section_project_click_key: {
+                    '0%': {
+                        opacity: '0',
+                        right: '-200%',
+                    },
+
+                    '60%': {
+                        opacity: '1',
+                        right: '20px',
+                    },
+                    '100%': {
+                        right: '0',
+                    },
+                },
+                section_project_non_click_key: {
+                    '10%': {
+                        right: '0',
+                    },
+                    '50%': {
+                        right: '20px',
+                    },
+                    '100%': {
+                        right: '-200%',
+                    },
+                },
             },
 
             animation: {
@@ -134,8 +160,8 @@ module.exports = {
                 section_skill_animation: 'section_skill_animation_key .4s ease forwards',
                 section_skill_button_cover: 'section_skill_button_cover_key 1s ease-in-out infinite',
 
-                projects_portofoliosite_view_up_box: 'projects_portofoliosite_view_up_box_key 1s forwards',
-                projects_portofoliosite_view_down_box: 'projects_portofoliosite_view_down_box_key 1s forwards',
+                section_project_click: 'section_project_click_key .4s ease forwards',
+                section_project_non_click: 'section_project_non_click_key .4s ease forwards',
             },
         },
     },

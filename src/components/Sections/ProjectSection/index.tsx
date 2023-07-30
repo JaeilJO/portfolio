@@ -1,42 +1,80 @@
-import Link from "next/link";
-import React from "react";
+import Image from 'next/image';
+import Link from 'next/link';
+import React, { useState } from 'react';
+import { BiLogoTailwindCss } from 'react-icons/bi';
 
 import {
-  BsAspectRatio,
-  BsFillCaretDownFill,
-  BsLink45Deg,
-} from "react-icons/bs";
+    BsAspectRatio,
+    BsCaretDownFill,
+    BsCaretUpFill,
+    BsFillCaretDownFill,
+    BsLink,
+    BsLink45Deg,
+} from 'react-icons/bs';
+import { RiBearSmileFill } from 'react-icons/ri';
+import { TbBrandNextjs } from 'react-icons/tb';
 
 function ProjectSection() {
-  return (
-    <div className="relative flex w-full min-h-screen max-sm:flex-col">
-      <div className="flex items-center justify-center flex-1 w-full text-9xl max-md:text-7xl">
-        Project
-      </div>
-      <div className="flex flex-col flex-1 w-full px-10 py-5 ">
-        <div className="">
-          <div className="text-4xl max-sm:3xl">Projects</div>
-          <hr className="w-[60%] my-3" />
-          <ul>
-            <li className="w-full items-center flex justify-between p-2 h-[3em] text-neutral-900 bg-blue-100 rounded-xl">
-              <div>Portfolio Site</div>
-              <div className="flex gap-3 text-2xl text-neutral-900">
-                <Link
-                  href={"#"}
-                  className="p-2 duration-200 rounded-md hover:bg-stone-200 "
+    const [clicked, setClicked] = useState(false);
+    return (
+        <div className="relative flex w-full min-h-screen max-sm:flex-col">
+            <div className="flex items-center justify-center flex-1 w-full text-9xl max-md:text-7xl">Project</div>
+
+            <div className="flex items-center justify-center flex-1 w-full ">
+                <div
+                    className="relative w-[15em] h-[22em] rounded-md shadow-xl cursor-pointer bg-neutral-50 text-neutral-900  duration-200 overflow-hidden "
+                    onClick={() => {
+                        setClicked(!clicked);
+                    }}
                 >
-                  <BsLink45Deg />
-                </Link>
-                <div className="p-2 duration-200 rounded-md cursor-pointer hover:bg-stone-200">
-                  <BsFillCaretDownFill />
+                    <Image
+                        alt="s"
+                        width={200}
+                        height={200}
+                        className="absolute top-2/4 left-2/4 -translate-x-[50%] -translate-y-[50%] "
+                        src={'/handwrite.png'}
+                    />
+                    <div className="absolute text-xl lg:text-4xl bottom-5 left-5 ">My Porfolio Site</div>
+                    <div className="absolute bottom-5 right-5">
+                        <ul>
+                            <li className="relative p-1 lg:text-3xl border-[1px] text-xl rounded-md z-20 bg-neutral-50 hover:bg-[#e2e2e2] duration-300">
+                                <Link href={'https://portfolio-five-alpha-25.vercel.app/'}>
+                                    <BsLink />
+                                </Link>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div className="absolute top-5 right-5">
+                        <ul
+                            className={`relative flex flex-col items-end gap-3 max-sm:text-lg ${
+                                clicked ? `animate-section_project_click` : `animate-section_project_non_click`
+                            }  `}
+                        >
+                            <li className="flex items-center gap-2 ">
+                                <div className="text-[.8em]">Next JS</div>
+                                <div>
+                                    <TbBrandNextjs />
+                                </div>
+                            </li>
+                            <li className="flex items-center gap-2">
+                                <div className="text-[.8em]">Zustand</div>
+                                <div>
+                                    <RiBearSmileFill />
+                                </div>
+                            </li>
+                            <li className="flex items-center gap-2 ">
+                                <div className="text-[.8em]">TailwindCSS</div>
+                                <div>
+                                    <BiLogoTailwindCss />
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-              </div>
-            </li>
-          </ul>
+            </div>
         </div>
-      </div>
-    </div>
-  );
+    );
 }
 
 export default ProjectSection;
