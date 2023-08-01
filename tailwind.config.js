@@ -182,9 +182,9 @@ module.exports = {
         section_skill_animation:
           "section_skill_animation_key .4s ease forwards",
         section_skill_click_animation:
-          "section_skill_click_animation_key 2s ease infinite",
+          "section_skill_click_animation_key 1.3s ease infinite",
         section_skill_click_round_animation:
-          "section_skill_click_round_animation_key 2s 2.5s ease infinite",
+          "section_skill_click_round_animation_key 1.3s 1.5s ease infinite",
 
         section_project_click: "section_project_click_key .4s ease forwards",
         section_project_non_click:

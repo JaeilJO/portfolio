@@ -23,19 +23,6 @@ function SkillSection() {
     "-translate-x-[70em]",
     "-translate-x-[80em]",
   ];
-  const leftClick = () => {
-    setClicked(true);
-    if (currentSkill === 1) {
-      setTimeout(() => {
-        setCurrentSkill(9);
-      }, 100);
-    }
-    setCurrentSkill(currentSkill - 1);
-    setAnimation("animate-section_skill_animation");
-    setTimeout(() => {
-      setAnimation("");
-    }, 300);
-  };
 
   const rightClick = () => {
     setClicked(true);
@@ -60,10 +47,6 @@ function SkillSection() {
         <div className="absolute z-30 flex w-full h-full ">
           {clicked ? <></> : <Explanation />}
 
-          <button
-            className="relative flex items-center justify-center w-full h-full"
-            onClick={leftClick}
-          />
           <button className="relative w-full h-full" onClick={rightClick} />
         </div>
         <div className="relative text-2xl lg:text-5xl md:text-4xl w-[10em] h-[10em]  overflow-hidden ">
