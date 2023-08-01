@@ -19,7 +19,7 @@ function HomeSection() {
                 </div>
             </div>
 
-            <div className="relative flex flex-col items-center justify-start gap-10 ">
+            <div className="relative flex flex-col items-center justify-start flex-1 gap-10 ">
                 <div className="relative text-9xl max-sm:text-6xl max-md:text-7xl">A Front engineer</div>
                 <div
                     className={`relative  w-[80%] h-[2px]  bg-neutral-900 ${
