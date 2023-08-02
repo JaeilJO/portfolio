@@ -6,12 +6,12 @@ function AboutSection() {
   });
 
   return (
-    <div className="relative flex w-screen h-screen max-sm:flex-col" ref={ref}>
-      <div className="flex items-center justify-center w-full h-full overflow-hidden text-9xl max-md:text-7xl ">
+    <div className="relative flex w-screen h-screen max-sm:flex-col " ref={ref}>
+      <div className="flex items-center justify-center w-full h-full overflow-hidden max-sm:items-end text-9xl max-md:text-7xl ">
         <div
           className={`relative opacity-0 ${
             inView ? `animate-section_about_title` : ``
-          }`}
+          }  max-sm:bottom-20`}
         >
           About
         </div>
