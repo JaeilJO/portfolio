@@ -21,7 +21,7 @@ function HomeSection() {
 
       <div className="relative flex-1 ">
         <div className="relative flex flex-col items-center gap-7 top-10">
-          <div className="relative text-9xl max-sm:text-5xl max-md:text-7xl">
+          <div className="relative text-center text-9xl max-[300px]:text-3xl max-sm:text-5xl max-md:text-7xl">
             A Front engineer
           </div>
           <div
@@ -30,7 +30,7 @@ function HomeSection() {
             } dark:bg-neutral-50`}
           />
           <div
-            className={`text-5xl font-thin opacity-0 max-sm:text-xl ${
+            className={`text-5xl font-thin text-center opacity-0 max-sm:text-xl ${
               inView ? `animate-section_home_subtitle` : ``
             }`}
           >

@@ -11,13 +11,13 @@ function ProjectSection() {
   const [clicked, setClicked] = useState(false);
   return (
     <div className="relative flex w-screen h-screen max-sm:flex-col">
-      <div className="flex items-center justify-center w-full h-full max-sm:items-end text-9xl max-md:text-7xl">
+      <div className="flex items-center justify-center flex-1 w-full max-sm:items-end text-9xl max-md:text-7xl">
         <div className="relative max-sm:bottom-10">Project</div>
       </div>
 
-      <div className="flex items-center justify-center h-full ">
+      <div className="flex items-center justify-center flex-1 ">
         <div
-          className="relative w-[15em] h-[22em] rounded-md shadow-xl cursor-pointer bg-neutral-50 text-neutral-900  duration-200 overflow-hidden "
+          className="relative w-[50%] min-w-[15em] h-[70%] max-sm:w-[40%] max-sm:h-[90%]  rounded-md shadow-xl cursor-pointer bg-neutral-50 text-neutral-900  duration-200 overflow-hidden "
           onClick={() => {
             setClicked(!clicked);
           }}
