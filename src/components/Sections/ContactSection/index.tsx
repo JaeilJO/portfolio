@@ -34,18 +34,22 @@ function ContactSection() {
             );
     };
     return (
-        <div className="flex w-screen h-screen max-sm:flex-col max-sm:my-[50%] pt-[100px]">
+        <div className="flex w-screen h-screen max-sm:flex-col max-sm:my-[50%] pt-[50px]">
             <div className="flex items-center justify-center grow-[1]  max-sm:items-end text-9xl max-sm:text-6xl ">
                 <div className="relative max-sm:bottom-10">Contact</div>
             </div>
 
-            <div className="flex items-center justify-center grow-[1] text-2xl  max-sm:text-[1.2rem] max-sm:items-start px-10 ">
-                <form className="relative flex flex-col justify-center w-full " ref={form} onSubmit={sendEmail}>
+            <div className="flex items-center justify-center grow-[1] text-2xl  max-sm:text-[1.2rem] max-sm:items-start px-10  ">
+                <form
+                    className="relative flex flex-col justify-center min-w-[300px] max-w-[600px] w-full"
+                    ref={form}
+                    onSubmit={sendEmail}
+                >
                     <input
                         type="email"
                         name="email"
                         placeholder="E-mail"
-                        className="p-3 mt-1 mb-10 text-[18px] font-thin border-b-2 border-stone-200 bg-inherit placeholder:font-light  focus:outline-none max-sm:text-[16px] placeholder:text-neutral-900 md:placeholderbg-opacity-0"
+                        className="p-3 mt-1 mb-10 text-[18px] font-thin border-b-2 border-stone-200 bg-inherit placeholder:font-light  focus:outline-none max-sm:text-[16px] placeholder:text-neutral-900 dark:placeholder:text-neutral-50 md:placeholderbg-opacity-0"
                         required
                     />
 
@@ -53,12 +57,12 @@ function ContactSection() {
                         type="text"
                         name="name"
                         placeholder="Name"
-                        className="p-3 mt-1 mb-10 text-[18px] font-thin border-b-2 border-stone-200 bg-inherit placeholder:font-light focus:outline-none max-sm:text-[16px] placeholder:text-neutral-900"
+                        className="p-3 mt-1 mb-10 text-[18px] font-thin border-b-2 border-stone-200 bg-inherit placeholder:font-light focus:outline-none max-sm:text-[16px] placeholder:text-neutral-900 dark:placeholder:text-neutral-50"
                         required
                     />
 
                     <textarea
-                        className="p-3 mt-1 mb-10 text-[18px] font-thin placeholder-opacity-0 border-b-2 bg-inherit placeholder:font-light focus:outline-none placeholder:text-neutral-900"
+                        className="p-3 mt-1 mb-10 text-[18px] font-thin placeholder-opacity-0 border-b-2 bg-inherit placeholder:font-light focus:outline-none placeholder:text-neutral-900 dark:placeholder:text-neutral-50"
                         ref={textarea}
                         onChange={handleResizeHeight}
                         rows={1}

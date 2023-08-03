@@ -39,8 +39,8 @@ function SkillSection() {
     };
 
     return (
-        <div className="flex w-screen h-screen max-sm:flex-col">
-            <div className="relative flex items-center justify-center w-full grow-[1]  max-sm:items-end text-9xl max-sm:text-7xl max-sm:pt-[100px] ">
+        <div className="flex w-screen h-screen max-sm:flex-col max-sm:pt-[50px]">
+            <div className="relative flex items-center justify-center w-full grow-[1]  max-sm:items-end text-9xl max-sm:text-7xl  ">
                 <div className="relative bottom-10">Skill</div>
             </div>
 
@@ -49,7 +49,7 @@ function SkillSection() {
                     <button className="relative w-full h-full" onClick={rightClick} />
                 </div>
                 <div className="relative text-2xl lg:text-5xl md:text-4xl w-[10em]  min-h-[300px] h-[50%]   overflow-hidden ">
-                    <ul className={`absolute flex max-sm:top-[30%]   bottom-[50%]   ${leftMove[currentSkill]} `}>
+                    <ul className={`absolute flex max-sm:top-[50%]   bottom-[50%]   ${leftMove[currentSkill]} `}>
                         {newArray.map((skill) => (
                             <SkillItem key={skill.key} title={skill.title} icon={skill.icon} animation={animation} />
                         ))}
