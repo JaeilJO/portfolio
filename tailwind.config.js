@@ -165,6 +165,12 @@ module.exports = {
                         transform: 'scaleY(100%) translateY(0px)',
                     },
                 },
+                navigation_alert_bar_key: {
+                    '30%': { transform: 'translate(-50%,120px)', opacity: '0' },
+                    '40%': { transform: 'translate(-50%,110px)', opacity: '1' },
+                    '90%': { transform: 'translate(-50%,110px)', opacity: '1' },
+                    '100%': { transform: 'translate(-50%,110px)', opacity: '0' },
+                },
             },
 
             animation: {
@@ -173,6 +179,8 @@ module.exports = {
                 hamburgerBar_top_appear: 'hamburgerBar_appear_key .4s ease-in-out forwards',
                 hamburgerBar_middle_appear: 'hamburgerBar_appear_key .4s .2s ease-in-out forwards',
                 hamburgerBar_bottom_appear: 'hamburgerBar_appear_key .4s .3s ease-in-out forwards',
+
+                navigation_alert_bar: 'navigation_alert_bar_key 5s ease-in-out forwards',
 
                 hamburgerBar_clicked_top: 'hamburgerBar_clicked_top_key .4s ease-in-out forwards',
                 hamburgerBar_clicked_middle: 'hamburgerBar_clicked_middle_key .4s ease-in-out forwards',

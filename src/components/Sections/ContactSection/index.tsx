@@ -1,8 +1,10 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
+import { useAlert } from '@/zustand/contactAlertStore';
 
 function ContactSection() {
     const textarea = useRef<HTMLTextAreaElement>(null!);
+    const [appearAlert, resetAlert] = useAlert((state) => [state.appearAlert, state.resetAlert]);
     const handleResizeHeight = () => {
         if (textarea.current) {
             textarea.current.style.height = 'auto';
@@ -24,7 +26,10 @@ function ContactSection() {
             )
             .then(
                 (result) => {
-                    alert('Success');
+                    appearAlert();
+                    setTimeout(() => {
+                        resetAlert();
+                    }, 5000);
                     form.current && form.current.reset();
                 },
                 (error) => {
@@ -33,6 +38,7 @@ function ContactSection() {
                 }
             );
     };
+
     return (
         <div className="flex w-screen h-screen max-sm:flex-col max-sm:my-[50%] pt-[50px]">
             <div className="flex items-center justify-center grow-[1]  max-sm:items-end text-9xl max-sm:text-6xl ">
@@ -62,7 +68,7 @@ function ContactSection() {
                     />
 
                     <textarea
-                        className="p-3 mt-1 mb-10 text-[18px] font-thin placeholder-opacity-0 border-b-2 bg-inherit placeholder:font-light focus:outline-none placeholder:text-neutral-900 dark:placeholder:text-neutral-50"
+                        className="p-3 mt-1 max-h-[220px] mb-10 text-[18px] font-thin placeholder-opacity-0 border-b-2 bg-inherit placeholder:font-light focus:outline-none placeholder:text-neutral-900 dark:placeholder:text-neutral-50"
                         ref={textarea}
                         onChange={handleResizeHeight}
                         rows={1}
