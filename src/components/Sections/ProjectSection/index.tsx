@@ -15,7 +15,7 @@ function ProjectSection() {
                 <div className="relative max-sm:bottom-10">Project</div>
             </div>
 
-            <div className="relative flex items-center justify-center grow-[1]  max-sm:items-start">
+            <div className="relative flex items-center justify-center grow-[1]  max-sm:pb-10  max-sm:items-start">
                 <div
                     className=" relative w-[50%] max-h-[500px] min-w-[250px] h-[70%] min-h-[300px]  rounded-md shadow-xl cursor-pointer bg-neutral-50 text-neutral-900 top-0  duration-200 overflow-hidden  "
                     onClick={() => {
