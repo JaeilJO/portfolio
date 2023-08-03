@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import SkillItem from './SkillItem';
 import Explanation from './Explanation';
 import { useInView } from 'react-intersection-observer';
+import { BsFillCursorFill } from 'react-icons/bs';
 
 function SkillSection() {
     const [currentSkill, setCurrentSkill] = useState(1);
@@ -49,11 +50,26 @@ function SkillSection() {
                 <div className="relative bottom-10">Skill</div>
             </div>
 
-            <div className="relative flex justify-center w-full grow-[1] items-center  max-sm:items-start ">
-                <div className="absolute z-30 flex w-full h-[50%]">
-                    <button className="relative w-full h-full" onClick={rightClick} />
+            <div className="relative flex justify-center w-full grow-[1] items-center   max-sm:items-start ">
+                <div className="absolute flex w-full h-full ">
+                    <button className="relative z-30 flex w-full h-full " onClick={rightClick}>
+                        {clicked ? (
+                            ``
+                        ) : (
+                            <>
+                                <div className="absolute w-full bg-black dark:bg-white opacity-20 left-2/4 top-2/4 -translate-y-2/4 -translate-x-2/4 h-2/4 max-sm:h-full "></div>
+                                <span className="absolute top-2/4 -translate-x-2/4 left-2/4 -translate-y-2/4 text-[1.6rem] dark:text-neutral-500 animate-section_skill_click_animation">
+                                    <BsFillCursorFill />
+                                </span>
+                                <span className="absolute dark:text-neutral-500 top-2/4 -translate-x-2/4 left-2/4 translate-y-[50%] font-thin text-[1.3rem]">
+                                    Click to See More
+                                </span>
+                            </>
+                        )}
+                    </button>
                 </div>
-                <div className="relative text-2xl lg:text-5xl md:text-4xl w-[10em]  min-h-[300px] h-[50%]   overflow-hidden ">
+
+                <div className="relative text-2xl lg:text-5xl md:text-4xl w-[10em]  min-h-[300px] h-[50%]  overflow-hidden ">
                     <ul
                         className={`absolute flex max-sm:top-[50%] top-[30%]  bottom-[50%]  ${leftMove[currentSkill]} `}
                     >

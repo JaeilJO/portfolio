@@ -137,15 +137,16 @@ module.exports = {
                 },
                 section_skill_click_animation_key: {
                     '50%': {
-                        transform: 'scale(0.9) translate(-50%,-50%)',
+                        transform: 'scale(0.8) translate(-50%,-50%)',
                     },
                 },
                 section_skill_click_round_animation_key: {
                     '100%': {
-                        width: '1em',
-                        height: '1em',
+                        transform: 'scale(20.5) translate(20%,-30%)',
+                        left: '50%',
+                        right: '50%',
+
                         opacity: '0',
-                        transform: 'scale(1.5) translate(-10%,-60%)',
                     },
                 },
                 section_project_opening_animation_key: {
@@ -196,6 +197,7 @@ module.exports = {
                 section_about_title: 'section_about_title_key .8s ease-in-out forwards',
 
                 section_skill_animation: 'section_skill_animation_key .4s ease forwards',
+                section_skill_round_animation: 'section_skill_click_round_animation_key 2s 1s ease infinite',
                 section_skill_click_animation: 'section_skill_click_animation_key 2s ease infinite',
 
                 section_project_opening_animation: 'section_project_opening_animation_key 1s ease-in-out forwards',
