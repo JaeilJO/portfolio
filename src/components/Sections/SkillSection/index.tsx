@@ -48,8 +48,8 @@ function SkillSection() {
                 <div className="absolute z-30 flex w-full h-[50%]">
                     <button className="relative w-full h-full" onClick={rightClick} />
                 </div>
-                <div className="relative text-2xl lg:text-5xl md:text-4xl w-[10em] min-h-[300px] h-[50%]   overflow-hidden ">
-                    <ul className={`absolute flex max-sm:top-0   bottom-[50%]   ${leftMove[currentSkill]} `}>
+                <div className="relative text-2xl lg:text-5xl md:text-4xl w-[10em]  min-h-[300px] h-[50%]   overflow-hidden ">
+                    <ul className={`absolute flex max-sm:top-[30%]   bottom-[50%]   ${leftMove[currentSkill]} `}>
                         {newArray.map((skill) => (
                             <SkillItem key={skill.key} title={skill.title} icon={skill.icon} animation={animation} />
                         ))}
