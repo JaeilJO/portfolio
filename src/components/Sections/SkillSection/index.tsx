@@ -45,23 +45,23 @@ function SkillSection() {
     };
 
     return (
-        <div className="flex w-screen h-screen max-sm:flex-col max-sm:py-[100px]" ref={ref}>
-            <div className="relative flex items-center justify-center w-full grow-[1]  max-sm:items-end text-9xl max-sm:text-7xl  ">
+        <div className="flex w-screen h-screen max-sm:flex-col  max-sm:py-[100px]" ref={ref}>
+            <div className="relative flex items-center justify-center w-full h-full grow-[1]  max-sm:items-end text-9xl max-sm:text-7xl ">
                 <div className="relative bottom-10">Skill</div>
             </div>
 
-            <div className="relative flex justify-center w-full grow-[1] items-center   max-sm:items-start ">
+            <div className="relative flex justify-center w-full h-full  grow-[1] items-center   max-sm:items-start ">
                 <div className="absolute flex w-full h-full ">
-                    <button className="relative z-30 flex w-full h-full " onClick={rightClick}>
+                    <button className="relative z-30 flex w-full h-full" onClick={rightClick}>
                         {clicked ? (
                             ``
                         ) : (
                             <>
-                                <div className="absolute w-full bg-black dark:bg-white opacity-20 left-2/4 top-2/4 -translate-y-2/4 -translate-x-2/4 h-[60%] "></div>
-                                <span className="absolute top-2/4 -translate-x-2/4 left-2/4 -translate-y-2/4 text-[1.6rem] dark:text-neutral-500 animate-section_skill_click_animation">
+                                <div className="absolute w-full bg-black h-2/4 dark:bg-white opacity-20 left-2/4 top-2/4 max-sm:h-[60%] max-sm:top-[5%]   max-sm:translate-y-0  -translate-y-2/4 -translate-x-2/4 " />
+                                <span className="absolute max-sm:top-[30%] max-sm:translate-y-0  top-2/4 -translate-x-2/4 left-2/4 -translate-y-2/4 text-[1.6rem] dark:text-neutral-500 animate-section_skill_click_animation">
                                     <BsFillCursorFill />
                                 </span>
-                                <span className="absolute dark:text-neutral-500 top-2/4 -translate-x-2/4 left-2/4 translate-y-[50%] font-thin text-[1.3rem]">
+                                <span className="absolute max-sm:translate-y-0  dark:text-neutral-500 top-2/4 -translate-x-2/4 left-2/4 translate-y-[50%] font-thin text-[1.3rem]">
                                     Click to See More
                                 </span>
                             </>
@@ -69,10 +69,8 @@ function SkillSection() {
                     </button>
                 </div>
 
-                <div className="relative text-2xl lg:text-5xl md:text-4xl w-[10em]  min-h-[300px] h-[50%]  overflow-hidden ">
-                    <ul
-                        className={`absolute flex max-sm:top-[50%] top-[30%]  bottom-[50%]  ${leftMove[currentSkill]} `}
-                    >
+                <div className="relative text-2xl   flex items-center max-sm:items-start lg:text-5xl md:text-4xl w-[10em]   min-h-[300px] h-full  overflow-hidden ">
+                    <ul className={`absolute flex max-sm:top-[15%] ${leftMove[currentSkill]} `}>
                         {newArray.map((skill) => (
                             <SkillItem
                                 key={skill.key}
