@@ -40,7 +40,7 @@ function ContactSection() {
     };
 
     return (
-        <div className="flex w-screen h-screen max-sm:flex-col max-sm:my-[50%] max-sm:pt-[50px]">
+        <div className="flex w-screen h-screen max-sm:flex-col max-sm:my-[50%] max-sm:pt-[35px]">
             <div className="flex items-center justify-center grow-[1]  max-sm:items-end text-9xl max-sm:text-6xl ">
                 <div className="relative max-sm:bottom-10">Contact</div>
             </div>
