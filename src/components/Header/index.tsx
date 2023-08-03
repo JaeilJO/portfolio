@@ -23,7 +23,7 @@ function Header() {
             <MobileMenu />
             <div className="absolute top-0 left-0 w-full h-full ">
                 <div
-                    className={`z-10 ${
+                    className={` ${
                         alert_status ? `animate-navigation_alert_bar` : ``
                     }  absolute left-[50%] flex justify-center items-center gap-2 -translate-x-[50%] opacity-0 rounded-md  font-light p-2 top-0 w-[90%] bg-green-700 text-neutral-50 translate-y-[0] text-[1rem] `}
                 >

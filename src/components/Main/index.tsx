@@ -9,7 +9,7 @@ function Main() {
 
     return (
         <div
-            className="absolute mt-[100px] w-screen   h-full bg-neutral-50 dark:bg-neutral-900"
+            className="absolute w-screen h-full bg-neutral-50 dark:bg-neutral-900"
             onClick={() => {
                 if (is_clicked) {
                     click();

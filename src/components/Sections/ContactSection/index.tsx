@@ -26,11 +26,11 @@ function ContactSection() {
             )
             .then(
                 (result) => {
+                    form.current && form.current.reset();
                     appearAlert();
                     setTimeout(() => {
                         resetAlert();
                     }, 5000);
-                    form.current && form.current.reset();
                 },
                 (error) => {
                     alert('something is worng');
