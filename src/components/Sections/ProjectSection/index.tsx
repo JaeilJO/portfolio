@@ -15,7 +15,7 @@ function ProjectSection() {
         threshold: 0.6,
     });
     return (
-        <div className=" relative flex w-screen h-screen  max-sm:flex-col max-sm:py-[100px]" ref={ref}>
+        <div className=" relative flex w-screen h-screen  max-sm:flex-col max-sm:py-[50px]" ref={ref}>
             <div className="flex items-center justify-center  grow-[1] w-full  max-sm:items-end text-9xl max-md:text-7xl ">
                 <div className="relative bottom-10">Project</div>
             </div>
