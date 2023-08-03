@@ -57,7 +57,7 @@ function SkillSection() {
                             ``
                         ) : (
                             <>
-                                <div className="absolute w-full bg-black dark:bg-white opacity-20 left-2/4 top-2/4 -translate-y-2/4 -translate-x-2/4 h-2/4 max-sm:h-full "></div>
+                                <div className="absolute w-full bg-black dark:bg-white opacity-20 left-2/4 top-2/4 -translate-y-2/4 -translate-x-2/4 h-[60%] "></div>
                                 <span className="absolute top-2/4 -translate-x-2/4 left-2/4 -translate-y-2/4 text-[1.6rem] dark:text-neutral-500 animate-section_skill_click_animation">
                                     <BsFillCursorFill />
                                 </span>
