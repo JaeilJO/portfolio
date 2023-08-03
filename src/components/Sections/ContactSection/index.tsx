@@ -55,7 +55,7 @@ function ContactSection() {
                         type="email"
                         name="email"
                         placeholder="E-mail"
-                        className="p-3 mt-1 mb-10 text-[18px] font-thin border-b-2 bg-transparent border-stone-200  placeholder:font-light  focus:outline-none max-sm:text-[16px] placeholder:text-neutral-900 dark:placeholder:text-neutral-50 "
+                        className="p-3  rounded-none mt-1 mb-10 text-[18px] font-thin border-b-2 bg-transparent border-stone-200  placeholder:font-light  focus:outline-none max-sm:text-[16px] placeholder:text-neutral-900 dark:placeholder:text-neutral-50 "
                         required
                     />
 
@@ -63,12 +63,12 @@ function ContactSection() {
                         type="text"
                         name="name"
                         placeholder="Name"
-                        className="p-3 mt-1 mb-10 text-[18px] font-thin border-b-2 bg-transparent border-stone-200   placeholder:font-light focus:outline-none max-sm:text-[16px] placeholder:text-neutral-900 dark:placeholder:text-neutral-50"
+                        className="p-3 mt-1 rounded-none mb-10 text-[18px] font-thin border-b-2 bg-transparent border-stone-200   placeholder:font-light focus:outline-none max-sm:text-[16px] placeholder:text-neutral-900 dark:placeholder:text-neutral-50"
                         required
                     />
 
                     <textarea
-                        className="p-3 mt-1 max-h-[220px] mb-10 text-[18px] font-thin bg-transparent placeholder-opacity-0 border-b-2  placeholder:font-light focus:outline-none placeholder:text-neutral-900 dark:placeholder:text-neutral-50"
+                        className="p-3 mt-1 rounded-none max-h-[220px] mb-10 text-[18px] font-thin bg-transparent placeholder-opacity-0 border-b-2  placeholder:font-light focus:outline-none placeholder:text-neutral-900 dark:placeholder:text-neutral-50"
                         ref={textarea}
                         onChange={handleResizeHeight}
                         rows={1}
