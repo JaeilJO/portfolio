@@ -10,7 +10,7 @@ function ModeChangeButton() {
         <li>
             <button
                 onClick={toggleMode}
-                className="text-yellow-300 duration-200 hover:text-yellow-200 ransition-colors dark:text-white dark:hover:text-yellow-200"
+                className="text-neutral-900 duration-200 hover:text-yellow-200 dark:text-neutral-50 dark:hover:text-yellow-200 text-[1.6rem] "
             >
                 <BsLightbulbFill />
             </button>

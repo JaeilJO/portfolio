@@ -67,12 +67,12 @@ module.exports = {
 
                 mobile_menu_bar_open_key: {
                     '0%': { height: '0%' },
-                    '60%': { height: '410%' },
-                    '100%': { height: '400%' },
+                    '60%': { height: '350%' },
+                    '100%': { height: '320%' },
                 },
 
                 mobile_menu_bar_close_key: {
-                    '0%': { height: '410%' },
+                    '0%': { height: '350%' },
                     '100%': { height: '0%', opacity: '0' },
                 },
 

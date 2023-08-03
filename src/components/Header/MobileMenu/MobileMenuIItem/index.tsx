@@ -8,7 +8,7 @@ function MobileMenuItem({ title, icon, href }: Pick<NavigationItemType, 'title' 
     };
     return (
         <li className={'text-2xl m-4'}>
-            <a href={`#${href}`} className={'flex items-center gap-3'} onClick={onClick}>
+            <a href={`#${href}`} className={'flex items-center gap-3'} onClick={onClick} title={`go to ${title}`}>
                 <div>{title}</div>
                 <div>{icon}</div>
             </a>

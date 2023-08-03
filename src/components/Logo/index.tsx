@@ -1,14 +1,15 @@
 function Logo() {
-  return (
-    <div className="relative">
-      <a
-        className="font-bold text-black dark:text-white text-[2em] transition-all duration-200"
-        href={"#home"}
-      >
-        JAEIL
-      </a>
-    </div>
-  );
+    return (
+        <h1 className="relative" title="Jaeil Studio">
+            <a
+                className="font-medium  text-black dark:text-white text-[35px]  duration-200"
+                href={'#home'}
+                title="go to home"
+            >
+                Jaeil
+            </a>
+        </h1>
+    );
 }
 
 export default Logo;

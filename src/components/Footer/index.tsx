@@ -1,15 +1,17 @@
 import Link from 'next/link';
 import Navigation from '../Header/Navigation';
+import Logo from '../Logo';
 
 function Footer() {
     return (
-        <footer className="h-[100px] flex-col max-sm:h-[5em] border-t-2 flex justify-center items-center font-thin gap-3 text-stone-500">
-            <div className="font-medium">JAEIL JO</div>
-            <ul className="flex gap-2 text-sm underline">
-                <li>
-                    <Link href={'https://github.com/'}>github</Link>
-                </li>
-            </ul>
+        <footer className="relative -bottom-5 my-20  h-[200px] border-t-2 flex justify-between items-center border-stone-500 font-thin mx-4 px-5  max-sm:flex-col max-sm:items-start max-sm:px-0 max-sm:justify-center max-sm:gap-5">
+            <div>
+                <div className="text-[16px]">Cantact Email</div>
+                <div className="text-[20px] font-medium">whwodlf97@gmail.com</div>
+            </div>
+            <div>
+                <Logo />
+            </div>
         </footer>
     );
 }
