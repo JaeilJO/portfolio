@@ -40,7 +40,7 @@ function ContactSection() {
     };
 
     return (
-        <div className="flex w-screen h-screen max-sm:flex-col max-sm:my-[50%] max-sm:pt-[30px]">
+        <div className="flex w-screen h-screen max-sm:flex-col max-sm:my-[50%] max-sm:pt-[100px]">
             <div className="flex items-center justify-center grow-[1]  max-sm:items-end text-9xl max-sm:text-6xl ">
                 <div className="relative max-sm:bottom-10">Contact</div>
             </div>
@@ -55,7 +55,7 @@ function ContactSection() {
                         type="email"
                         name="email"
                         placeholder="E-mail"
-                        className="p-3 mt-1 mb-10 text-[18px] font-thin border-b-2 border-stone-200 bg-inherit placeholder:font-light  focus:outline-none max-sm:text-[16px] placeholder:text-neutral-900 dark:placeholder:text-neutral-50 md:placeholderbg-opacity-0"
+                        className="p-3 mt-1 mb-10 text-[18px] font-thin border-b-2 border-stone-200 bg-inherit placeholder:font-light  focus:outline-none max-sm:text-[16px] placeholder:text-neutral-900 dark:placeholder:text-neutral-50 "
                         required
                     />
 

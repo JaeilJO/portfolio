@@ -46,7 +46,7 @@ function SkillSection() {
     useEffect(() => {}, []);
 
     return (
-        <div className="flex w-screen h-screen max-sm:flex-col max-sm:pt-[50px]" ref={ref}>
+        <div className="flex w-screen h-screen max-sm:flex-col max-sm:py-[100px]]" ref={ref}>
             <div className="relative flex items-center justify-center w-full grow-[1]  max-sm:items-end text-9xl max-sm:text-7xl  ">
                 <div className="relative bottom-10">Skill</div>
             </div>
