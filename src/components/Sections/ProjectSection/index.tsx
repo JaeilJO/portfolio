@@ -10,8 +10,8 @@ import { TbBrandNextjs } from 'react-icons/tb';
 function ProjectSection() {
     const [clicked, setClicked] = useState(false);
     return (
-        <div className="relative flex w-screen h-screen max-sm:flex-col ">
-            <div className="flex items-center justify-center grow-[1]   max-sm:items-end text-9xl max-md:text-7xl max-sm:pt-[100px]">
+        <div className="relative flex w-screen h-screen max-sm:flex-col">
+            <div className="flex items-center justify-center grow-[1]  max-sm:items-end text-9xl max-md:text-7xl  ">
                 <div className="relative max-sm:bottom-10">Project</div>
             </div>
 
