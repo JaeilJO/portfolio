@@ -15,9 +15,9 @@ function ProjectSection() {
         threshold: 0.6,
     });
     return (
-        <div className="relative flex w-screen h-screen  max-sm:flex-col max-sm:pt-[70px]" ref={ref}>
-            <div className="flex items-center justify-center grow-[1]  max-sm:items-end text-9xl max-md:text-7xl  ">
-                <div className="relative max-sm:bottom-10">Project</div>
+        <div className="bg-red-500 relative flex w-screen h-screen  max-sm:flex-col max-sm:pt-[100px]" ref={ref}>
+            <div className="flex items-center justify-center grow-[1]  max-sm:items-end text-9xl max-md:text-7xl ">
+                <div className="relative bottom-10">Project</div>
             </div>
 
             <div className="relative flex items-center justify-center grow-[1] max-sm:items-start">
