@@ -148,6 +148,23 @@ module.exports = {
                         transform: 'scale(1.5) translate(-10%,-60%)',
                     },
                 },
+                section_project_opening_animation_key: {
+                    '0%': {
+                        transform: 'scaleY(100%) translateY(0)',
+                    },
+
+                    '30%': {
+                        transform: 'scaleY(110%) translateY(-50px)',
+                    },
+
+                    '60%': {
+                        transform: 'scaleY(90%) translateY(0px)',
+                    },
+
+                    '100%': {
+                        transform: 'scaleY(100%) translateY(0px)',
+                    },
+                },
             },
 
             animation: {
@@ -172,8 +189,8 @@ module.exports = {
 
                 section_skill_animation: 'section_skill_animation_key .4s ease forwards',
                 section_skill_click_animation: 'section_skill_click_animation_key 2s ease infinite',
-                section_skill_click_round_animation: 'section_skill_click_round_animation_key 2s 0.4s  ease infinite',
 
+                section_project_opening_animation: 'section_project_opening_animation_key 1s ease-in-out forwards',
                 section_project_click: 'section_project_click_key .4s ease forwards',
                 section_project_non_click: 'section_project_non_click_key .4s ease forwards',
             },

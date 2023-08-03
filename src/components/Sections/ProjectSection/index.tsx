@@ -6,18 +6,25 @@ import { BiLogoTailwindCss } from 'react-icons/bi';
 import { BsLink } from 'react-icons/bs';
 import { RiBearSmileFill } from 'react-icons/ri';
 import { TbBrandNextjs } from 'react-icons/tb';
+import { useInView } from 'react-intersection-observer';
 
 function ProjectSection() {
     const [clicked, setClicked] = useState(false);
+    const { ref, inView, entry } = useInView({
+        /* Optional options */
+        threshold: 0.6,
+    });
     return (
-        <div className="relative flex w-screen h-screen  max-sm:flex-col max-sm:pt-[50px]">
+        <div className="relative flex w-screen h-screen  max-sm:flex-col max-sm:pt-[70px]" ref={ref}>
             <div className="flex items-center justify-center grow-[1]  max-sm:items-end text-9xl max-md:text-7xl  ">
                 <div className="relative max-sm:bottom-10">Project</div>
             </div>
 
             <div className="relative flex items-center justify-center grow-[1] max-sm:items-start">
                 <div
-                    className=" relative w-[50%] max-h-[500px] min-w-[250px] h-[70%] min-h-[300px]  rounded-md shadow-xl cursor-pointer bg-neutral-50 text-neutral-900 top-0  duration-200 overflow-hidden  "
+                    className={` relative w-[50%] max-h-[500px] min-w-[250px] h-[70%] ${
+                        inView ? `animate-section_project_opening_animation` : ``
+                    }  origin-bottom min-h-[350px]  rounded-md shadow-xl cursor-pointer bg-neutral-50 text-neutral-900 top-0 hover:bg-stone-200  duration-200 overflow-hidden `}
                     onClick={() => {
                         setClicked(!clicked);
                     }}

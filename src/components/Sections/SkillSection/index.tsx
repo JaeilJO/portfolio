@@ -1,13 +1,18 @@
 import Skills from '@/utils/Skills';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import SkillItem from './SkillItem';
 import Explanation from './Explanation';
+import { useInView } from 'react-intersection-observer';
 
 function SkillSection() {
     const [currentSkill, setCurrentSkill] = useState(1);
     const cloneLast = { ...Skills[0], key: 9 };
     const cloneFirst = { ...Skills[Skills.length - 1], key: 10 };
+    const { ref, inView, entry } = useInView({
+        /* Optional options */
+        threshold: 0.5,
+    });
 
     const [newArray, setNewArray] = useState([cloneFirst, ...Skills, cloneLast]);
     const [clicked, setClicked] = useState(false);
@@ -38,8 +43,10 @@ function SkillSection() {
         }, 300);
     };
 
+    useEffect(() => {}, []);
+
     return (
-        <div className="flex w-screen h-screen max-sm:flex-col max-sm:pt-[50px]">
+        <div className="flex w-screen h-screen max-sm:flex-col max-sm:pt-[50px]" ref={ref}>
             <div className="relative flex items-center justify-center w-full grow-[1]  max-sm:items-end text-9xl max-sm:text-7xl  ">
                 <div className="relative bottom-10">Skill</div>
             </div>
@@ -49,9 +56,18 @@ function SkillSection() {
                     <button className="relative w-full h-full" onClick={rightClick} />
                 </div>
                 <div className="relative text-2xl lg:text-5xl md:text-4xl w-[10em]  min-h-[300px] h-[50%]   overflow-hidden ">
-                    <ul className={`absolute flex max-sm:top-[50%]   bottom-[50%]   ${leftMove[currentSkill]} `}>
+                    <ul
+                        className={`absolute flex max-sm:top-[50%] top-[30%]  bottom-[50%]  ${leftMove[currentSkill]} `}
+                    >
                         {newArray.map((skill) => (
-                            <SkillItem key={skill.key} title={skill.title} icon={skill.icon} animation={animation} />
+                            <SkillItem
+                                key={skill.key}
+                                title={skill.title}
+                                icon={skill.icon}
+                                animation={animation}
+                                inView={inView}
+                                clicked={clicked}
+                            />
                         ))}
                     </ul>
                 </div>

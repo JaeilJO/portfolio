@@ -73,7 +73,7 @@ function ContactSection() {
                     <input
                         type="submit"
                         value="Submit"
-                        className="p-3 text-3xl font-light duration-200 rounded-lg cursor-pointer dark:bg-neutral-50 dark:text-neutral-900 bg-neutral-900 text-neutral-50 dark:hover:bg-stone-200 hover:bg-stone-500 "
+                        className="p-3 text-3xl font-light duration-200 border-4 rounded-lg cursor-pointer border-neutral-50 dark:border-neutral-900 dark:bg-neutral-50 dark:text-neutral-900 bg-neutral-900 text-neutral-50 dark:hover:bg-neutral-900 dark:hover:text-neutral-50 dark:hover:border-neutral-50 hover:bg-neutral-50 hover:text-neutral-900 hover:border-neutral-900 "
                     />
                 </form>
             </div>
