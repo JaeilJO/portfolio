@@ -1,61 +1,92 @@
-import Skills from '@/utils/Skills';
-import { useEffect, useState } from 'react';
+import Skills from "@/utils/Skills";
+import { useEffect, useState } from "react";
 
-import SkillItem from './SkillItem';
-import Explanation from './Explanation';
-import { useInView } from 'react-intersection-observer';
-import { BsFillCursorFill } from 'react-icons/bs';
-import CommonLeftText from '@/components/CommonComponents/CommonLeftText';
-import CommonSectionBackground from '@/components/CommonComponents/CommonSectionBackground';
-import CommonRightContentWrapper from '@/components/CommonComponents/CommonRightContentWrapper';
+import SkillItem from "./SkillItem";
+import Explanation from "./Explanation";
+import { useInView } from "react-intersection-observer";
+import { BsFillCursorFill } from "react-icons/bs";
+import CommonLeftText from "@/components/CommonComponents/CommonLeftText";
+import CommonSectionBackground from "@/components/CommonComponents/CommonSectionBackground";
+import CommonRightContentWrapper from "@/components/CommonComponents/CommonRightContentWrapper";
 
 function SkillSection() {
-    const [currentSkill, setCurrentSkill] = useState(1);
-    const cloneLast = { ...Skills[0], key: 9 };
-    const cloneFirst = { ...Skills[Skills.length - 1], key: 10 };
-    const { ref, inView, entry } = useInView({
-        /* Optional options */
-        threshold: 0.5,
-    });
+  const [currentSkill, setCurrentSkill] = useState(1);
+  const cloneLast = { ...Skills[0], key: 9 };
+  const cloneFirst = { ...Skills[Skills.length - 1], key: 10 };
+  const { ref, inView, entry } = useInView({
+    /* Optional options */
+    threshold: 0.5,
+  });
 
-    const [newArray, setNewArray] = useState([cloneFirst, ...Skills, cloneLast]);
-    const [clicked, setClicked] = useState(false);
-    const [animation, setAnimation] = useState(``);
-    const leftMove = [
-        '-translate-x-[0em]',
-        '-translate-x-[10em]',
-        '-translate-x-[20em]',
-        '-translate-x-[30em]',
-        '-translate-x-[40em]',
-        '-translate-x-[50em]',
-        '-translate-x-[60em]',
-        '-translate-x-[70em]',
-        '-translate-x-[80em]',
-    ];
+  const [newArray, setNewArray] = useState([cloneFirst, ...Skills, cloneLast]);
+  const [clicked, setClicked] = useState(false);
+  const [animation, setAnimation] = useState(``);
+  const leftMove = [
+    "-translate-x-[0em]",
+    "-translate-x-[10em]",
+    "-translate-x-[20em]",
+    "-translate-x-[30em]",
+    "-translate-x-[40em]",
+    "-translate-x-[50em]",
+    "-translate-x-[60em]",
+    "-translate-x-[70em]",
+    "-translate-x-[80em]",
+  ];
 
-    const rightClick = () => {
-        setClicked(true);
-        if (currentSkill === Skills.length) {
-            setTimeout(() => {
-                setCurrentSkill(1);
-            }, 100);
-        }
-        setCurrentSkill(currentSkill + 1);
-        setAnimation('animate-section_skill_animation');
-        setTimeout(() => {
-            setAnimation('');
-        }, 300);
-    };
+  const rightClick = () => {
+    setClicked(true);
+    if (currentSkill === Skills.length) {
+      setTimeout(() => {
+        setCurrentSkill(1);
+      }, 100);
+    }
+    setCurrentSkill(currentSkill + 1);
+    setAnimation("animate-section_skill_animation");
+    setTimeout(() => {
+      setAnimation("");
+    }, 300);
+  };
 
-    return (
-        <CommonSectionBackground>
-            <CommonLeftText title="Skill" />
+  return (
+    <CommonSectionBackground>
+      <CommonLeftText title="Skill" />
 
-            <CommonRightContentWrapper>
-                <div>Hello</div>
-            </CommonRightContentWrapper>
+      <CommonRightContentWrapper>
+        <div className="relative w-full h-full break-words ">
+          <button className="absolute w-full h-full ">
+            <div className="relative flex items-center justify-center w-full h-full ">
+              <div className="absolute w-full h-full bg-black rounded-lg opacity-30" />
+              <div className="relative text-[1.3rem] flex flex-col   items-center text-neutral-50">
+                <div className="">
+                  <BsFillCursorFill />
+                </div>
+                <div>Click to See More</div>
+              </div>
+            </div>
+          </button>
 
-            {/* <div className="relative flex justify-center w-full h-full  grow-[1] items-center   max-sm:items-start ">
+          <div className="w-full h-full bg-green-500">
+            <div className="relative w-full h-full bg-pink-700">
+              <ul
+                className={`absolute flex h-full top-0 left-0 bg-blue-600  ${leftMove[currentSkill]} flex-nowrap`}
+              >
+                {newArray.map((skill) => (
+                  <SkillItem
+                    key={skill.key}
+                    title={skill.title}
+                    icon={skill.icon}
+                    animation={animation}
+                    inView={inView}
+                    clicked={clicked}
+                  />
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </CommonRightContentWrapper>
+
+      {/* <div className="relative flex justify-center w-full h-full  grow-[1] items-center   max-sm:items-start ">
                 <div className="absolute flex w-full h-full ">
                     <button className="relative z-30 flex w-full h-full" onClick={rightClick}>
                         {clicked ? (
@@ -89,8 +120,8 @@ function SkillSection() {
                     </ul>
                 </div>
             </div> */}
-        </CommonSectionBackground>
-    );
+    </CommonSectionBackground>
+  );
 }
 
 export default SkillSection;
