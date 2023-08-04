@@ -8,7 +8,7 @@ function MobileMenu() {
     const [is_clicked] = useNavigation((state) => [state.is_clicked]);
     return (
         <div
-            className={`absolute top-[100%] left-0 w-full border-b-2 opacity-1 overflow-hidden bg-neutral-50 dark:bg-neutral-900 md:hidden  ${
+            className={`absolute top-[100%] h-0 left-0 w-full border-b-2 opacity-1 overflow-hidden bg-neutral-50 dark:bg-neutral-900   ${
                 is_clicked ? `animate-mobile_menu_bar_open` : `animate-mobile_menu_bar_close`
             }`}
         >

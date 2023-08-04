@@ -11,7 +11,7 @@ function HomeSection() {
     });
 
     return (
-        <div className="flex flex-col justify-between w-full h-full " ref={ref}>
+        <div className="flex flex-col justify-between w-screen h-screen " ref={ref}>
             <div className="relative flex w-full  overflow-hidden grow-[1] ">
                 <div className="relative flex items-end justify-center w-full h-full dark:fill-neutral-50 fill-neutral-900">
                     <div className="relative w-[50%] max-w-[500px] bottom-10 ">

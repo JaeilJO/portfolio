@@ -40,12 +40,12 @@ function ContactSection() {
     };
 
     return (
-        <div className="flex w-screen h-screen max-sm:flex-col max-sm:my-[50%] max-sm:pt-[35px]">
-            <div className="flex items-center justify-center grow-[1]  max-sm:items-end text-9xl max-sm:text-6xl ">
+        <div className="flex ">
+            {/* <div className="flex items-center justify-center grow-[1]  max-sm:items-end text-9xl max-sm:text-6xl ">
                 <div className="relative max-sm:bottom-10">Contact</div>
-            </div>
+            </div> */}
 
-            <div className="flex items-center justify-center grow-[1] text-2xl  max-sm:text-[1.2rem] max-sm:items-start px-10  ">
+            {/* <div className="flex items-center justify-center grow-[1] text-2xl  max-sm:text-[1.2rem] max-sm:items-start px-10  ">
                 <form
                     className="relative flex flex-col justify-center min-w-[300px] max-w-[600px] w-full"
                     ref={form}
@@ -82,7 +82,7 @@ function ContactSection() {
                         className="p-3 text-3xl font-light duration-200 border-4 rounded-lg cursor-pointer border-neutral-50 dark:border-neutral-900 dark:bg-neutral-50 dark:text-neutral-900 bg-neutral-900 text-neutral-50 dark:hover:bg-neutral-900 dark:hover:text-neutral-50 dark:hover:border-neutral-50 hover:bg-neutral-50 hover:text-neutral-900 hover:border-neutral-900 "
                     />
                 </form>
-            </div>
+            </div> */}
         </div>
     );
 }

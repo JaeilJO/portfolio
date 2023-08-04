@@ -101,7 +101,7 @@ module.exports = {
 
                 section_skill_animation_key: {
                     '50%': {
-                        transform: 'rotate(-30deg) skew(25deg) translate(20px,-20px)',
+                        transform: 'rotate(-30deg) skew(25deg) translate(15px,-15px)',
                         boxShadow: '-50px 50px 30px rgba(0,0,0,0.5)',
                     },
                 },

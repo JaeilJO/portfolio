@@ -79,14 +79,14 @@ function SkillItem({
             border_color.current = 'border-[#262626]';
             break;
     }
-    console.log(title === 'Zustand');
+
     return (
-        <li className="absolute flex items-center justify-center w-full h-full max-sm:items-start ">
-            <div className="relative w-[50%] h-[50%] max-sm:w-[40%] max-sm:h-[70%] flex justify-center items-center max-sm:items-start max-sm:pt-[10%]">
+        <div className="absolute flex items-center justify-center w-full h-full max-sm:items-start">
+            <div className="relative w-[50%] z-10 h-[50%] max-sm:w-[40%] max-sm:h-[70%] flex justify-center items-center max-sm:items-start max-sm:pt-[10%]">
                 <div
                     className={`${animation} ${
                         current_skill === primary_number ? `opacity-1` : `opacity-0`
-                    } relative flex w-[200px] h-[100px] xl:w-[300px] lg:h-[100px] xl:h-[150px] skew-x-[25deg] -rotate-[30deg]   ${
+                    } relative flex w-[200px] h-[100px] xl:w-[300px] lg:h-[100px] xl:h-[150px] skew-x-[25deg] -rotate-[30deg]    ${
                         main_color.current
                     } ${dark_light.current}`}
                 >
@@ -97,14 +97,16 @@ function SkillItem({
                         className={`absolute w-full h-[40px]  rotate-0 skew-x-[-45deg] bottom-[-40px] left-[-20px] ${side_color.current} border-[1px] ${border_color.current} `}
                     />
                     <div
-                        className={`flex items-center justify-center w-full gap-1 text-3xl  ${
+                        className={`flex ${
+                            title === 'Styled Components' ? `flex-col gap-0` : ``
+                        } items-center justify-center w-full gap-1 text-3xl  ${
                             title === 'Zustand' || title === 'NextJs' ? `text-neutral-50` : `text-neutral-900`
                         }`}
                     >
-                        <span>{icon}</span>
+                        <span className={`${title === 'Styled Components' ? `text-4xl` : ``}`}>{icon}</span>
                         <span
                             className={` text-3xl max-sm:text-xl ${
-                                title.length >= 14 ? 'xl:text-3xl lg:text-xl max-sm:text-sm ' : ''
+                                title.length >= 14 ? 'xl:text-2xl lg:text-lg text-lg max-sm:text-sm ' : ''
                             }`}
                         >
                             {title}
@@ -112,7 +114,7 @@ function SkillItem({
                     </div>
                 </div>
             </div>
-        </li>
+        </div>
     );
 }
 

@@ -12,12 +12,12 @@ function AboutSection() {
         <CommonSectionBackground ref_for_observer={ref}>
             <CommonLeftText title="About" />
             <CommonRightContentWrapper>
-                <div className="w-full h-full break-words font-thin max-sm:text-[1rem] text-[1.3rem] flex flex-col gap-2 max-sm:justify-start justify-center ">
-                    <div className="text-[2rem] font-light">
+                <div className="w-full h-full break-words   font-thin max-sm:text-[1rem] text-[1.3rem] flex flex-col gap-2 max-sm:justify-start justify-center ">
+                    <div className="text-[2rem] font-light max-sm:text-center">
                         <span className="mr-[0.3em]">My name is</span>
                         <span>Jaeil Jo</span>
                     </div>
-                    <div>
+                    <div className="max-sm:text-center max-sm:px-1">
                         I am a front-end developer who strives to efficiently implement diverse designs and constantly
                         stays up-to-date with the latest technologies. My passion lies in learning and applying
                         cutting-edge approaches to create visually appealing and highly functional user interfaces. I am
