@@ -5,6 +5,9 @@ import SkillItem from './SkillItem';
 import Explanation from './Explanation';
 import { useInView } from 'react-intersection-observer';
 import { BsFillCursorFill } from 'react-icons/bs';
+import CommonLeftText from '@/components/CommonComponents/CommonLeftText';
+import CommonSectionBackground from '@/components/CommonComponents/CommonSectionBackground';
+import CommonRightContentWrapper from '@/components/CommonComponents/CommonRightContentWrapper';
 
 function SkillSection() {
     const [currentSkill, setCurrentSkill] = useState(1);
@@ -45,12 +48,14 @@ function SkillSection() {
     };
 
     return (
-        <div className="flex w-screen h-screen max-sm:flex-col  max-sm:pb-[100px] " ref={ref}>
-            <div className="relative flex items-center justify-center w-full h-full grow-[1]  max-sm:items-end text-9xl max-sm:text-7xl ">
-                <div className="relative bottom-10">Skill</div>
-            </div>
+        <CommonSectionBackground>
+            <CommonLeftText title="Skill" />
 
-            <div className="relative flex justify-center w-full h-full  grow-[1] items-center   max-sm:items-start ">
+            <CommonRightContentWrapper>
+                <div>Hello</div>
+            </CommonRightContentWrapper>
+
+            {/* <div className="relative flex justify-center w-full h-full  grow-[1] items-center   max-sm:items-start ">
                 <div className="absolute flex w-full h-full ">
                     <button className="relative z-30 flex w-full h-full" onClick={rightClick}>
                         {clicked ? (
@@ -83,8 +88,8 @@ function SkillSection() {
                         ))}
                     </ul>
                 </div>
-            </div>
-        </div>
+            </div> */}
+        </CommonSectionBackground>
     );
 }
 

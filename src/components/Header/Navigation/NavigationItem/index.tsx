@@ -1,9 +1,12 @@
 import LogoDecorator from '@/components/DecoratorComponents/ColumnLineDecorator';
 import { NavigationItemType } from '@/utils/NavigationItems';
-import { useState } from 'react';
+import { MouseEventHandler, useState } from 'react';
 
 function NavigationItem({ href, title }: Pick<NavigationItemType, 'href' | 'title'>) {
     const [isHovered, setIsHovered] = useState(false);
+    const atag = (e: MouseEvent) => {
+        e.preventDefault;
+    };
     return (
         <li
             onMouseOver={() => {
@@ -11,6 +14,9 @@ function NavigationItem({ href, title }: Pick<NavigationItemType, 'href' | 'titl
             }}
             onMouseLeave={() => {
                 setIsHovered(false);
+            }}
+            onClick={(e) => {
+                e.preventDefault;
             }}
             className={`relative before:absolute before:w-0 before:h-1 before:bg-neutral-900 before:dark:bg-neutral-50 before:-bottom-1 hover:before:w-full before:duration-200`}
         >
