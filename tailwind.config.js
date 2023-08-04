@@ -12,17 +12,6 @@ module.exports = {
                 'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
                 'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
             },
-            colors: {
-                react_color: '#5ED3F3',
-                nextjs_color: '#282828',
-                styled_components_color: '#BF7196',
-                tailwind_color: '#37BCF8',
-                zustand_color: '#433E38',
-                redux_color: '#7248B6',
-                html_color: '#DD4B25',
-                css_color: '#126EB0',
-                javascript_color: '#DE9D27',
-            },
 
             keyframes: {
                 increase_width: {
@@ -68,12 +57,12 @@ module.exports = {
 
                 mobile_menu_bar_open_key: {
                     '0%': { height: '0%' },
-                    '60%': { height: '350%' },
-                    '100%': { height: '320%' },
+                    '60%': { height: '420%' },
+                    '100%': { height: '400%' },
                 },
 
                 mobile_menu_bar_close_key: {
-                    '0%': { height: '350%' },
+                    '0%': { height: '400%' },
                     '100%': { height: '0%', opacity: '0' },
                 },
 

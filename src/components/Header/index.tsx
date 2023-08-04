@@ -13,7 +13,7 @@ function Header() {
     const [alert_status] = useAlert((state) => [state.alert_status]);
     return (
         <header
-            className={` z-[9999] fixed  w-full h-[100px] text-[1.6rem] backdrop-blur-sm   flex justify-between items-center  duration-200  px-[1.5em] ${
+            className={` z-[9999] fixed  w-full h-[100px] max-sm:h-[80px] text-[1.6rem] backdrop-blur-sm   flex justify-between items-center  duration-200  px-[1.5em] ${
                 is_clicked ? bg_fill : ``
             }`}
         >
