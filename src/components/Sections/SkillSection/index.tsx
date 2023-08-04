@@ -40,7 +40,7 @@ function SkillSection() {
             <CommonRightContentWrapper>
                 <div className="relative w-full h-full ">
                     <button
-                        className="absolute z-20 w-full h-full max-sm:h-[60vw] max-sm:max-h-[250px] max-sm:min-h-[200px]"
+                        className="absolute z-20 w-full h-full max-sm:h-[70vw] max-sm:max-h-[300px] max-sm:min-h-[230px]"
                         onClick={rightClick}
                     >
                         {clicked ? (
@@ -49,7 +49,7 @@ function SkillSection() {
                             <div className="relative flex items-center justify-center w-full h-full ">
                                 <div className="absolute w-full h-full bg-black rounded-lg opacity-30" />
                                 <div className="relative text-[1.3rem] flex flex-col items-center text-neutral-50">
-                                    <div>
+                                    <div className="animate-section_skill_click_animation">
                                         <BsFillCursorFill />
                                     </div>
                                     <div>Click to See More</div>
