@@ -1,20 +1,9 @@
-import LogoDecorator from '@/components/DecoratorComponents/ColumnLineDecorator';
 import { NavigationItemType } from '@/utils/NavigationItems';
 import { MouseEventHandler, useState } from 'react';
 
 function NavigationItem({ href, title }: Pick<NavigationItemType, 'href' | 'title'>) {
-    const [isHovered, setIsHovered] = useState(false);
-    const atag = (e: MouseEvent) => {
-        e.preventDefault;
-    };
     return (
         <li
-            onMouseOver={() => {
-                setIsHovered(true);
-            }}
-            onMouseLeave={() => {
-                setIsHovered(false);
-            }}
             onClick={(e) => {
                 e.preventDefault;
             }}
