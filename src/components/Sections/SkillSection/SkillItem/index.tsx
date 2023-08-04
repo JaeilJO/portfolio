@@ -15,60 +15,71 @@ function SkillItem({
     const main_color = useRef<string | null>(null);
     const side_color = useRef<string | null>(null);
     const dark_light = useRef<string | null>(null);
+    const border_color = useRef<string | null>(null);
 
     switch (title) {
         case 'React':
             main_color.current = 'bg-[#48CEF6]';
             side_color.current = 'bg-[#18B6E7]';
             dark_light.current = 'dark:shadow-[#48CEF6]';
+            border_color.current = 'border-[#18B6E7]';
             break;
         case 'NextJs':
             main_color.current = 'bg-[#313131]';
             side_color.current = 'bg-[#2c2c2c]';
             dark_light.current = 'dark:shadow-[#313131]';
+            border_color.current = 'border-[#2c2c2c]';
             break;
         case 'Styled Components':
             main_color.current = 'bg-[#D175BC]';
             side_color.current = 'bg-[#cf68b7]';
             dark_light.current = 'dark:shadow-[#D175BC]';
+            border_color.current = 'border-[#cf68b7]';
             break;
         case 'TailwindCSS':
             main_color.current = 'bg-[#48A6AD]';
             side_color.current = 'bg-[#39a0a8]';
             dark_light.current = 'dark:shadow-[#48A6AD]';
+            border_color.current = 'border-[#39a0a8]';
             break;
         case 'Zustand':
             main_color.current = 'bg-[#443E38]';
             side_color.current = 'bg-[#3d3834]';
             dark_light.current = 'dark:shadow-[#443E38]';
+            border_color.current = 'border-[#3d3834]';
             break;
         case 'Redux':
             main_color.current = 'bg-[#774ABC]';
             side_color.current = 'bg-[#6e40b7]';
             dark_light.current = 'dark:shadow-[#774ABC]';
+            border_color.current = 'border-[#6e40b7]';
             break;
         case 'HTML':
             main_color.current = 'bg-[#F26624]';
             side_color.current = 'bg-[#E54C20]';
+            border_color.current = 'border-[#E54C20]';
             dark_light.current = 'dark:shadow-[#F26624]';
             break;
         case 'CSS':
             main_color.current = 'bg-[#32A5D5]';
             side_color.current = 'bg-[#126EB0]';
             dark_light.current = 'dark:shadow-[#32A5D5]';
+            border_color.current = 'border-[#126EB0]';
             break;
         case 'JavaScript':
             main_color.current = 'bg-[#F4991F]';
             side_color.current = 'bg-[#F07E23]';
             dark_light.current = 'dark:shadow-[#F4991F]';
+            border_color.current = 'border-[#F07E23]';
             break;
         default:
             main_color.current = 'bg-[#262626]';
             side_color.current = 'bg-[#262626]';
             dark_light.current = 'dark:shadow-[#262626]';
+            border_color.current = 'border-[#262626]';
             break;
     }
-
+    console.log(title === 'Zustand');
     return (
         <li className="absolute flex items-center justify-center w-full h-full max-sm:items-start ">
             <div className="relative w-[50%] h-[50%] max-sm:w-[40%] max-sm:h-[70%] flex justify-center items-center max-sm:items-start max-sm:pt-[10%]">
@@ -80,14 +91,22 @@ function SkillItem({
                     } ${dark_light.current}`}
                 >
                     <div
-                        className={`absolute w-[40px] h-full rotate-0 skew-y-[-45deg] left-[-40px] top-[20px] ${side_color.current}`}
+                        className={`absolute w-[40px] h-full rotate-0 skew-y-[-45deg] left-[-40px] top-[20px] border-[1px] ${border_color.current} ${side_color.current}`}
                     />
                     <div
-                        className={`absolute w-full h-[40px]  rotate-0 skew-x-[-45deg] bottom-[-40px] left-[-20px] ${side_color.current}`}
+                        className={`absolute w-full h-[40px]  rotate-0 skew-x-[-45deg] bottom-[-40px] left-[-20px] ${side_color.current} border-[1px] ${border_color.current} `}
                     />
-                    <div className="flex items-center justify-center w-full text-3xl ">
+                    <div
+                        className={`flex items-center justify-center w-full gap-1 text-3xl  ${
+                            title === 'Zustand' || title === 'NextJs' ? `text-neutral-50` : `text-neutral-900`
+                        }`}
+                    >
                         <span>{icon}</span>
-                        <span className={` text-3xl ${title.length >= 11 ? 'xl:text-3xl lg:text-xl text-sm ' : ''}`}>
+                        <span
+                            className={` text-3xl max-sm:text-xl ${
+                                title.length >= 14 ? 'xl:text-3xl lg:text-xl max-sm:text-sm ' : ''
+                            }`}
+                        >
                             {title}
                         </span>
                     </div>

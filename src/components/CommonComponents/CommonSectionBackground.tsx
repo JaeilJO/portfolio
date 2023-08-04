@@ -8,7 +8,10 @@ function CommonSectionBackground({
     ref_for_observer?: (node?: Element | null | undefined) => void;
 }) {
     return (
-        <div ref={ref_for_observer} className="relative flex w-screen h-screen  max-sm:flex-col max-sm:py-[100px] ">
+        <div
+            ref={ref_for_observer}
+            className="relative flex w-screen h-full  max-sm:flex-col max-sm:py-[100px] bg-red-200 "
+        >
             {children}
         </div>
     );
