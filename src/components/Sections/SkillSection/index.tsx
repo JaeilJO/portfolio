@@ -34,46 +34,44 @@ function SkillSection() {
     };
 
     return (
-        <div className="flex items-center w-screen h-screen bg-purple-300">
-            <CommonSectionBackground>
-                <CommonLeftText title="Skill" />
+        <CommonSectionBackground>
+            <CommonLeftText title="Skill" />
 
-                <CommonRightContentWrapper>
-                    <div className="relative w-full h-full ">
-                        <button className="absolute z-20 w-full h-full" onClick={rightClick}>
-                            {clicked ? (
-                                <></>
-                            ) : (
-                                <div className="relative flex items-center justify-center w-full h-full ">
-                                    <div className="absolute w-full h-full bg-black rounded-lg opacity-30" />
-                                    <div className="relative text-[1.3rem] flex flex-col items-center text-neutral-50">
-                                        <div className="">
-                                            <BsFillCursorFill />
-                                        </div>
-                                        <div>Click to See More</div>
+            <CommonRightContentWrapper>
+                <div className="relative w-full h-full ">
+                    <button className="absolute z-20 w-full h-full" onClick={rightClick}>
+                        {clicked ? (
+                            <></>
+                        ) : (
+                            <div className="relative flex items-center justify-center w-full h-full ">
+                                <div className="absolute w-full h-full bg-black rounded-lg opacity-30" />
+                                <div className="relative text-[1.3rem] flex flex-col items-center text-neutral-50">
+                                    <div className="">
+                                        <BsFillCursorFill />
                                     </div>
+                                    <div>Click to See More</div>
                                 </div>
-                            )}
-                        </button>
-
-                        <div className="w-full h-full ">
-                            <div className="relative w-full h-full ">
-                                {newArray.map((skill) => (
-                                    <SkillItem
-                                        key={skill.key}
-                                        title={skill.title}
-                                        icon={skill.icon}
-                                        animation={animation}
-                                        current_skill={currentSkill}
-                                        primary_number={skill.key + 1}
-                                    />
-                                ))}
                             </div>
+                        )}
+                    </button>
+
+                    <div className="w-full h-full ">
+                        <div className="relative w-full h-full ">
+                            {newArray.map((skill) => (
+                                <SkillItem
+                                    key={skill.key}
+                                    title={skill.title}
+                                    icon={skill.icon}
+                                    animation={animation}
+                                    current_skill={currentSkill}
+                                    primary_number={skill.key + 1}
+                                />
+                            ))}
                         </div>
                     </div>
-                </CommonRightContentWrapper>
-            </CommonSectionBackground>
-        </div>
+                </div>
+            </CommonRightContentWrapper>
+        </CommonSectionBackground>
     );
 }
 
