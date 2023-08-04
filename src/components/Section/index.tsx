@@ -3,7 +3,6 @@ import { LegacyRef, MutableRefObject, useEffect, useRef } from 'react';
 
 function Section({ id, content }: Pick<SectionType, 'id' | 'content'>) {
     const wrapRef = useRef<HTMLElement | null>(null);
-    console.log(wrapRef.current);
 
     useEffect(() => {
         if (wrapRef.current) {

@@ -82,7 +82,7 @@ function SkillItem({
 
     return (
         <div className="absolute flex items-center justify-center w-full h-full max-sm:items-start">
-            <div className="relative w-[50%] z-10 h-[50%] max-sm:w-[40%] max-sm:h-[70%] flex justify-center items-center max-sm:items-start max-sm:pt-[10%]">
+            <div className="relative w-[50%] z-10 h-[50%] max-sm:w-[50%] max-sm:h-[50%] flex justify-center items-center max-sm:items-start max-sm:pt-[20%]">
                 <div
                     className={`${animation} ${
                         current_skill === primary_number ? `opacity-1` : `opacity-0`

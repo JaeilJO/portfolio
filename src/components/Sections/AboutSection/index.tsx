@@ -12,7 +12,7 @@ function AboutSection() {
         <CommonSectionBackground ref_for_observer={ref}>
             <CommonLeftText title="About" />
             <CommonRightContentWrapper>
-                <div className="w-full h-full break-words   font-thin max-sm:text-[1rem] text-[1.3rem] flex flex-col gap-2 max-sm:justify-start justify-center ">
+                <div className="w-full h-full break-words   font-thin max-sm:text-[1.2rem] text-[1.3rem] flex flex-col gap-2 max-sm:justify-start justify-center ">
                     <div className="text-[2rem] font-light max-sm:text-center">
                         <span className="mr-[0.3em]">My name is</span>
                         <span>Jaeil Jo</span>
