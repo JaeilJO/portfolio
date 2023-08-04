@@ -46,7 +46,7 @@ function ContactSection() {
         <CommonSectionBackground>
             <CommonLeftText title="Contact" />
             <CommonRightContentWrapper>
-                <div className="w-full h-full max-sm:max-h-[70%] ">
+                <div className="w-full h-full max-sm:max-h-[80%] ">
                     <form
                         className="flex flex-col justify-between w-full h-full max-sm:px-6 "
                         ref={form}
@@ -67,7 +67,7 @@ function ContactSection() {
                             required
                         />
                         <textarea
-                            className="p-3  rounded-none max-h-[220px]  text-[18px] font-thin bg-transparent placeholder-opacity-0 border-b-2  placeholder:font-light focus:outline-none placeholder:text-neutral-900 dark:placeholder:text-neutral-50"
+                            className="p-3  rounded-none max-h-[120px]  text-[18px] font-thin bg-transparent placeholder-opacity-0 border-b-2  placeholder:font-light focus:outline-none placeholder:text-neutral-900 dark:placeholder:text-neutral-50"
                             ref={textarea}
                             onChange={handleResizeHeight}
                             rows={1}
